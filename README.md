@@ -1,18 +1,19 @@
 # twitter_demo
 
-This demo_app demenscreate how to create a single page app with the mean stack, mongodb, express,
-angular and node.js
-This app is similar to Twitter. users can add post, post document will send to server, and save into
-mongodb, at the meantime all posts will be displayed on the main page.
+This project demenscreates a CRUD web application using mongodb, express.js,
+angular.js and node.js
 
-Next , I will add an authentication API into this app, and the posts will be linked to the currently
+When user add a post, the post document will be sent to server, and save into
+mongodb. At the meantime, all posts will be displayed on the UI.
+
+Next , I am going to  add an authentication API into this app, and all posts will be linked to the currently
 logged-in user.
 
 
-run a mongodb client locally
+## run a mongodb client locally
 
-install dependency module 
+## install dependency module 
 node install 
 
-run a server 
+## run a server 
 node server.js 

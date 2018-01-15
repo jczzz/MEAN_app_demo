@@ -1,6 +1,6 @@
-# twitter_demo
+# socialApp_demo
 
-This project demenscreates a CRUD web application using mongodb, express.js,
+This project demenscreates a CRUD social web application using mongodb, express.js,
 angular.js and node.js
 
 When user add a post, the post document will be sent to server, and save into

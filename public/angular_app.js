@@ -42,22 +42,22 @@ app.controller('PostsCtrl', function ($scope, PostsSvc) {
     };
   };
 
-  //第二部分   发送一个请求 抓取所有保存在服务器的过去posts
-  // 接收这些data, 存入在$scopt.posts array
-  // view页面 可以显示这些posts
-  PostsSvc.fetch()
-  /*
-   fetch = function () {
-    $http.get('/api/posts');
-   };
-   */
-  // 你正在做的是发送http GET请求给server， if it responds with a success status code
-  // 你将 response(posts)  注入 $scope.posts 数组
-  .success(function (response) {
-    //replace the $scope.posts array with an array(response) 
-    //you get from the API via $http
-    $scope.posts = response;
-  });
+	  //第二部分   发送一个请求 抓取所有保存在服务器的过去posts
+	  // 接收这些data, 存入在$scopt.posts array
+	  // view页面 可以显示这些posts
+	  PostsSvc.fetch()
+	  /*
+	   fetch = function () {
+		$http.get('/api/posts');
+	   };
+	   */
+	  // 你正在做的是发送http GET请求给server， if it responds with a success status code
+	  // 你将 response(posts)  注入 $scope.posts 数组
+	  .success(function (response) {
+		//replace the $scope.posts array with an array(response) 
+		//you get from the API via $http
+		$scope.posts = response;
+	  });
 
 });
 
@@ -70,10 +70,10 @@ app.service('PostsSvc', function ($http) {
   //定义该服务的method
   this.fetch = function () {
     //调用一个angular内置服务  $http
-    return $http.get('/api/posts')
+    return $http.get('/posts')
   };
   this.create = function (post) {
     //post(url, data(request content))
-    return $http.post('/api/posts', post)
+    return $http.post('/posts', post)
   };
 });

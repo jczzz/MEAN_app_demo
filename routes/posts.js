@@ -1,12 +1,12 @@
 var router = require('express').Router();
-var Post = require('../../models/post');
+var Post_model = require('../models/post_model');
 
-//从server.js抽离
+
 
 //处理http GET 请求
-router.get('/posts', function (req, res, next) {
+router.get('/', function (req, res, next) {
   //调用Post model里的 find()
-  Post.find()
+  Post_model.find()
   .sort('-date')
   .exec(function (err, posts) {
     if (err) { return next(err) };
@@ -14,11 +14,11 @@ router.get('/posts', function (req, res, next) {
   });
 });
 
-router.post('/posts', function (req, res, next) {
+router.post('/', function (req, res, next) {
   // 接收post request object
   //create an instance of Post model
   // create a document
-  var post = new Post({
+  var post = new Post_model({
     username: req.body.username,
     body:     req.body.body,
   });

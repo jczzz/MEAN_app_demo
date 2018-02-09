@@ -6,7 +6,7 @@ var Post_model = require('../models/post_model');
 
 //处理http GET 请求
 router.get('/', function (req, res, next) {
-  //调用Mongodb里的 find()操作method
+  //调用Mongodb里的 find()操作 sort()操作 exec()操作
   Post_model.find()
   .sort('-date')
   .exec(function (err, posts) {

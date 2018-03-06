@@ -17,3 +17,7 @@ node install
 
 ## run a server 
 node server.js 
+
+
+## Screenshot
+![home](https://github.com/jczzz/MEAN_Social_App_Demo/blob/master/screenshot.JPG)

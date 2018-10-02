@@ -13,7 +13,7 @@ logged-in user.
 ## run a mongodb client locally
 
 ## install dependency module 
-node install 
+npm install 
 
 ## run a server 
 node server.js 
